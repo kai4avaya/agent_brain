@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <script src="download.js"></script>
+  <script src="delete_all.js"></script>
+  <script src="ai_queries.js"></script>
+  <script src="initiate_doc_load_into_db.js"></script>
+
+
+  <body>
+    <div class="container">
+      <div
+        id="success-notice"
+        style="
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: lightgreen;
+          padding: 10px;
+          border-radius: 5px;
+        "
+      >
+        Connected
+      </div>
+      <div
+        id="error-notice"
+        style="
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: lightcoral;
+          padding: 10px;
+          border-radius: 5px;
+        "
+      >
+        Disconnected
+      </div>
+      <form id="upload-form">
+        <input type="file" id="file-input" name="files" multiple />
+        <button type="submit">Upload</button>
+      </form>
+
+      <form id="scrape-form">
+        <label for="urls">Enter URLs (separated by commas):</label><br />
+        <input type="text" id="urls" name="urls" /><br />
+        <input type="submit" value="Scrape" />
+      </form>
+
+      <label for="file-list">Files in database:</label> <br/>
+      <ul id="file-list"></ul>
+
+      <label for="deleteInput">Please confirm by typing in "delete-all":</label>
+      <br />
+      <input type="text" id="deleteInput" placeholder="delete-all" />
+      <button onclick="deleteAll()">Delete all docs in database</button>
+
+      <div id="status"></div>
+
+      <h2>Query</h2>
+
+      <input type="text" id="queryInput" placeholder="Enter your query" />
+      <button onclick="sendQuery()">Send Query</button>
+
+      <div id="queryHolder">
+        <pre id="queryOutput"></pre>
+      </div>
+
+      <h2>AI</h2>
+
+      <!-- <button onclick="startChat_stream()">Start Chat</button>
+      <div id="chat"></div> -->
+    
+      <input type="text" id="aiInput" placeholder="Enter your query" />
+      <button id="aiSendButton" onclick="startChat_stream3()">Send AI Query</button>
+      <div id="aiOutput"></div>
+
+      <!-- <div id="chat-container">
+        <div id="chat"></div>
+      </div> -->
+    </div>
+  </body>
+  <script src="get_token.js"></script>
+  <script src="script.js"></script>
+  <script src="scrape.js"></script>
+  <script src="list_files.js"></script>
+  <script src="ai_chat.js"></script>
+  <script src="ai_stream_chat.js"></script>
+
+
+  <script>
+    // fetch('chatInterface.html')
+    // .then(response => response.text())
+    // .then(data => {
+    //   document.getElementById('chat').innerHTML = data;
+    // });
+  </script>
+</html>

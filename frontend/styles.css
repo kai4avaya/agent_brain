@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #status {
+    margin-top: 20px;
+  }
+
+  .link-style {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .container {
+    font-family: monospace;
+    color: #333;
+    background: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#success-notice, #error-notice {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+#success-notice {
+    background: lightgreen;
+}
+
+#error-notice {
+    background: lightcoral;
+}
+
+#upload-form, #scrape-form {
+    margin-bottom: 20px;
+}
+
+#file-input, #urls {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"], input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+
+#file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+#queryOutput {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+#queryHolder{
+    transition: opacity 0.5s ease-in-out;
+  }

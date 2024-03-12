@@ -1,0 +1,3 @@
+{
+    "ignore": ["storage_openai/*", "storage_xenova/*"]
+  }
